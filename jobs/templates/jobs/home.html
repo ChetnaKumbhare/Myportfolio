@@ -1,7 +1,10 @@
 
 <!doctype html>
+
 <html lang="en">
+
 <head>
+  {% load staticfiles %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -17,30 +20,30 @@
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">CHETNA KUMBHARE</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link" href="#">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Facebook</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">LinkedIn</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link" href="#">Resume</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+      <a class="navbar-brand" href="#">CHETNA KUMBHARE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.facebook.com/chetna.kumbhare.948" target="_blank">Facebook</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/chetna-kumbhare-bb9244124/" target="_blank">LinkedIn</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="{% static '0801cs151023_BE_CS_Chetna_Kumbhare(1).pdf' %}" >Resume</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <main role="main">
@@ -49,9 +52,9 @@
       <div class="container">
         <h1 class="jumbotron-heading">Hi, I'm Chetna.</h1>
         <p class="lead text-muted">I love to make django websites.It's fun to create something what mind can imagine.</p>
-        <p>
-          <a href="" class="btn btn-info">Contact Me</a>
-        </p>
+        <img src="{% static 'pic.jpg' %}" height="300px" width="300px"><br><br><br>
+        <a href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" class="btn btn-info">Contact Me</a>
+
       </div>
     </section>
 
@@ -73,13 +76,13 @@
     </div>
   </main>
   <footer class="text-muted text-center ">
-      <div class="container-fluid">
-        <p class="float-right">
-          <a href="#" style="color:#5bb7c6"><i class="fas fa-arrow-alt-circle-up"></i></a>
-        </p>
-          <p>CopyRight Chetna_Kumbhare@{% now "Y" %} </p>
-      </div>
-    </footer>
+    <div class="container-fluid">
+      <p class="float-right">
+        <a href="#" style="color:#5bb7c6"><i class="fas fa-arrow-alt-circle-up"></i></a>
+      </p>
+      <p>CopyRight Chetna_Kumbhare@{% now "Y" %} </p>
+    </div>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
