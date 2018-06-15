@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="../../../../favicon.ico">
+  <link rel="shortcut icon" href="{% static 'suitcase.png' %}" />
 
   <title>My personal portfolio</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -38,7 +38,7 @@
             <a class="nav-link" href="https://www.linkedin.com/in/chetna-kumbhare-bb9244124/" target="_blank">LinkedIn</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="{% static '0801cs151023_BE_CS_Chetna_Kumbhare(1).pdf' %}">Resume</a>
+            <a class="nav-link" href="{% static '0801cs151023_BE_CS_Chetna_Kumbhare.pdf' %}">Resume</a>
           </li>
         </ul>
       </div>
@@ -52,11 +52,12 @@
       <h2><i class="fas fa-file-alt"></i> Latest Posts</h2>
       <hr>
       {% for blog in blogs.all %}
-      <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
+      <a href="{% url 'detail' blog.id %}"><h3 style="color:darkblue">-{{ blog.title }}</h3></a>
       {{ blog.pub_date_pretty }}<br>
       <img class=".img-fluid" src="{{ blog.image.url }}" height="200px" width="400px"/>
       <br>
       <p>{{ blog.summary }}</p>
+      <br><br>
       {% endfor %}
       <div>
       </main>
